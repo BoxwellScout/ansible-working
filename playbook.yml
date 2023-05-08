@@ -3,7 +3,7 @@
   hosts: webservers
   become: yes 
   become_method: runas
-  become_user: Administrator
+  ansible_become_user: Administrator
   vars:
     ansible_connection: winrm
     ansible_winrm_transport: ntlm
