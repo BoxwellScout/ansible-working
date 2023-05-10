@@ -1,6 +1,6 @@
 ---
 - name: sleep alot
-  hosts: webservers
+  hosts: all
   become: yes 
   become_user: Administrator
   vars_files:
