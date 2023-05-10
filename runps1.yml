@@ -1,6 +1,6 @@
 ---
 - name: sleep alot
-  hosts: all
+  hosts: 54.219.167.216
   become: yes 
   become_user: Administrator
   vars_files:
@@ -9,3 +9,8 @@
   tasks:
   - name: Run ps1
     script: ./scripts/sleep.ps1
+
+  - name: copyscript
+    win_copy:
+      src: /scripts/sleep.ps1
+      dest: c:\Temp
