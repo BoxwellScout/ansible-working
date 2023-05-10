@@ -1,0 +1,12 @@
+---
+- name: Ensure IIS is installed and started 
+  hosts: webservers
+  become: yes 
+  become_user: Administrator
+  vars_files:
+    - vault/secrets.yml
+    - vault/win_connec
+
+  tasks:
+  - name: Run ps1
+    script: ./scripts/sleep.ps1
