@@ -2,5 +2,5 @@
 # tasks file for copy-web-files
 - name: Copy web files
   win_copy:
-    src: ./playbook-fun/files
+    src: ./playbook-fun/files/.
     dest: C:\inetpub\wwwroot
