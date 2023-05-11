@@ -1,4 +1,6 @@
 - hosts: localhost
+  vars_files:
+    - vault/gitsecrets.yml
   tasks:
     - name: Test that my module works
       github_repo:
@@ -8,7 +10,6 @@
 
     - name: Create a github Repo
       github_repo:
-        github_auth_key: ".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"
         username: "BoxwellScout"
         name: "Hello-World"
         description: "This is your first repository"
