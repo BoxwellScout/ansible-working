@@ -1,6 +1,6 @@
 - hosts: localhost
   vars_files:
-    - vault/gitsecrets.yml
+    - ../vault/gitsecrets.yml
   tasks:
     - name: Test that my module works
       github_repo:
